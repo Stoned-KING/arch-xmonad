@@ -84,9 +84,15 @@ done
 func_category Development
 
 list=(
-atom
+#atom
+emacs
+bash-language-server
+pyright
+haskell-language-server
+rust-analyzer
 meld
-code
+#code
+alacritty
 obsidian
 sublime-text-4
 )
@@ -105,9 +111,11 @@ func_category Graphics
 list=(
 gimp
 inkscape
-nomacs
+#nomacs
 blender
 krita
+godot
+scribus
 )
 
 count=0
@@ -122,10 +130,12 @@ done
 func_category Internet
 
 list=(
-chromium
+#chromium
 brave-bin
-google-chrome
-qbittorrent
+#google-chrome
+#qbittorrent
+rtorrent
+yt-dlp
 )
 
 count=0
@@ -141,6 +151,8 @@ func_category Multimedia
 
 list=(
 vlc
+kdeconnect
+ristretto
 )
 
 count=0
@@ -155,9 +167,9 @@ done
 func_category Office
 
 list=(
-evince
-libreoffice-fresh
-libreoffice-still
+#evince
+#libreoffice-fresh
+#libreoffice-still
 )
 
 count=0
@@ -174,6 +186,14 @@ func_category System
 list=(
 dconf-editor
 arc-gtk-theme
+breeze-gtk
+materia-gtk-theme
+numix-circle-icon-theme-git
+papirus-icon-theme
+pop-icon-theme
+capitaine-cursors
+brightnessctl
+adwaita-cursors
 )
 
 count=0

@@ -83,6 +83,10 @@ ttf-liberation
 ttf-roboto
 ttf-ubuntu-font-family
 tamsyn-font
+noto-fonts
+ttf-ms-fonts
+ttf-cascadia-code
+ttf-mac-fonts
 )
 
 count=0

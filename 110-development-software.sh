@@ -64,17 +64,19 @@ echo "Installation of the development packages"
 list=(
 #firefox
 brave-bin
-google-chrome
-code
-#sublime-text-4
+#google-chrome
+emacs
+alacritty
 #flameshot
 meld
 #the_platinum_searcher-bin
 #telegram-desktop
 signal-desktop
 #discord
-#simplescreenrecorder
+simplescreenrecorder
 scrot
+git
+openssh
 )
 
 count=0

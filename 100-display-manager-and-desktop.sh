@@ -61,11 +61,11 @@ echo "Installation of the core software"
 
 list=(
 sddm
-#arcolinux-wallpapers-git
+alacritty
 thunar
 thunar-archive-plugin
 thunar-volman
-#xfce4-terminal
+xfce4-terminal
 arcolinux-xfce-git
 arcolinux-local-xfce4-git
 xmonad
@@ -74,12 +74,15 @@ xmonad-contrib
 haskell-dbus
 xmonad-utils
 xmonad-log
+xmonad-dbus
 feh
 checkupdates-aur
 perl-checkupdates-aur
 polybar
 arcolinux-polybar-git
-#awesome-terminal-fonts
+arcolinux-xmobar-git
+arcolinux-xmonad-xmobar-git
+awesome-terminal-fonts
 dmenu
 arcolinux-xmonad-polybar-git
 arcolinux-config-all-desktops-git
