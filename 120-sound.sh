@@ -110,6 +110,7 @@ function_pipewire() {
 	gst-plugins-ugly   
 	volumeicon
 	playerctl
+	wireplumber
 	)
 
 	count=0
@@ -127,6 +128,7 @@ function_pipewire() {
 	echo "Software has been installed"
 	echo "################################################################"
 	echo;tput sgr0
+
 }
 
 echo

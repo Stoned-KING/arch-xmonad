@@ -61,6 +61,7 @@ echo "Installation of laptop software"
 
 list=(
 tlp
+ntp
 )
 
 count=0
@@ -78,7 +79,8 @@ echo "Enabling services"
 echo "################################################################"
 echo;tput sgr0
 
-sudo systemctl enable tlp.service
+sudo systemctl enable --now tlp.service
+sudo systemctl enable --now ntpd.service
 
 tput setaf 11;
 echo "################################################################"

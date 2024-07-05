@@ -85,16 +85,21 @@ func_category Development
 
 list=(
 #atom
+#code
+git
+openssh
+dotnet-runtime
+dotnet-sdk
 emacs
+clang
+pyright
 bash-language-server
 pyright
 haskell-language-server
 rust-analyzer
 meld
-#code
 alacritty
 obsidian
-sublime-text-4
 )
 
 count=0
@@ -133,8 +138,9 @@ list=(
 #chromium
 brave-bin
 #google-chrome
-#qbittorrent
-rtorrent
+qbittorrent
+steam
+#rtorrent
 yt-dlp
 )
 
@@ -194,6 +200,18 @@ pop-icon-theme
 capitaine-cursors
 brightnessctl
 adwaita-cursors
+virtualbox-host-modules-arch
+virtualbox
+pass
+xclip
+feh
+socat
+etcher-bin
+thunderbird
+downgrade
+inxi
+peek
+mintstick
 )
 
 count=0
@@ -227,6 +245,127 @@ for name in "${list[@]}" ; do
 done
 
 ###############################################################################
+
+func_category Additional-distro-specific
+
+list=(
+arandr
+dmenu
+feh
+gmrun
+gtk-engine-murrine
+imagemagick
+lxappearance
+lxrandr
+#nitrogen
+picom
+playerctl
+python-pywal
+volumeicon
+w3m
+urxvt-resize-font-git
+xfce4-appfinder
+xfce4-notifyd
+xfce4-power-manager
+xfce4-screenshooter
+xfce4-settings
+xfce4-screenshooter
+xfce4-taskmanager
+xfce4-terminal
+hardcode-fixer-git
+brightnessctl
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+echo "Fixing hardcoded icon paths for applications - Wait for it"
+sudo hardcode-fixer
+
+###############################################################################
+
+func_category Arcolinux-General
+
+list=(
+arcolinux-bin-git
+arcolinux-hblock-git
+arcolinux-root-git
+arcolinux-termite-themes-git
+archlinux-tweak-tool-git
+#arcolinux-variety-git
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+func_category Fonts
+
+list=(
+arcolinux-fonts-git
+awesome-terminal-fonts
+adobe-source-sans-fonts
+cantarell-fonts
+noto-fonts
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-hack
+ttf-inconsolata
+ttf-liberation
+ttf-roboto
+ttf-ubuntu-font-family
+tamsyn-font
+noto-fonts
+ttf-ms-fonts
+ttf-cascadia-code
+ttf-mac-fonts
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+func_category Conky
+
+list=(
+conky-lua-archers
+arcolinux-conky-collection-git
+arcolinux-pipemenus-git
+yad
+libpulse
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+tput setaf 6;
+echo "################################################################"
+echo "Copying all files and folders from /etc/skel to ~"
+echo "################################################################"
+echo;tput sgr0
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
+cp -arf /etc/skel/. ~
 
 tput setaf 11;
 echo "################################################################"
