@@ -66,82 +66,46 @@ func_category() {
 
 ###############################################################################
 
-func_category Accessories
+func_category Utilities
 
 list=(
-variety
-)
-
-count=0
-for name in "${list[@]}" ; do
-	count=$[count+1]
-	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
-	func_install $name
-done
-
-###############################################################################
-
-func_category Development
-
-list=(
-#atom
-#code
-git
-openssh
-dotnet-runtime
-dotnet-sdk
-emacs
-clang
-pyright
-bash-language-server
-pyright
-haskell-language-server
-rust-analyzer
-meld
-alacritty
-obsidian
-)
-
-count=0
-for name in "${list[@]}" ; do
-	count=$[count+1]
-	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
-	func_install $name
-done
-
-###############################################################################
-
-func_category Graphics
-
-list=(
-gimp
-inkscape
-#nomacs
-blender
-krita
-godot
-scribus
-)
-
-count=0
-for name in "${list[@]}" ; do
-	count=$[count+1]
-	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
-	func_install $name
-done
-
-###############################################################################
-
-func_category Internet
-
-list=(
-#chromium
-brave-bin
-#google-chrome
-qbittorrent
-steam
-#rtorrent
-yt-dlp
+    alacritty
+    downgrade
+    virtualbox-host-modules-arch
+    virtualbox
+    pass
+    xclip
+    feh
+    socat
+    etcher-bin
+    thunderbird
+    inxi
+    peek
+    mintstick-git
+    thunar
+    thunar-archive-plugin
+    thunar-volman
+    thunar-archive-plugin
+    rsync
+    timeshift
+    htop
+    bashtop
+    gtop
+    hwinfo
+    hwdetect
+    fastfetch
+    hw-probe
+    font-manager
+    thunderbird
+    polybar
+    cbatticon
+    volumeicon
+    sbxkb
+    dmenu
+    xfce4-appfinder
+    #variety
+    steam
+    brightnessctl
 )
 
 count=0
@@ -156,9 +120,14 @@ done
 func_category Multimedia
 
 list=(
-vlc
-kdeconnect
-ristretto
+    kdeconnect
+    yt-dlp
+    ffmpeg
+    vlc
+    ristretto
+    audacity
+    ardour
+    feh
 )
 
 count=0
@@ -170,12 +139,87 @@ done
 
 ###############################################################################
 
-func_category Office
+func_category Development
 
 list=(
-#evince
-#libreoffice-fresh
-#libreoffice-still
+    #atom
+    #code
+    git
+    openssh
+    dotnet-runtime
+    dotnet-sdk
+    emacs
+    clang
+    pyright
+    bash-language-server
+    pyright
+    haskell-language-server
+    rust-analyzer
+    meld
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+func_category Graphics
+
+list=(
+    gimp
+    inkscape
+    #nomacs
+    blender
+    krita
+    godot
+    fontforge
+    goxel
+    birdfont
+    darktable
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+func_category Internet
+
+list=(
+    #chromium
+    brave-bin
+    #google-chrome
+    qbittorrent
+    #rtorrent
+    yt-dlp
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package no."$count" "$name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+func_category Document
+
+list=(
+    libreoffice-fresh
+    libreoffice-still
+    scribus
+    obsidian
+    dictd
+    evince
 )
 
 count=0
@@ -190,28 +234,26 @@ done
 func_category System
 
 list=(
-dconf-editor
-arc-gtk-theme
-breeze-gtk
-materia-gtk-theme
-numix-circle-icon-theme-git
-papirus-icon-theme
-pop-icon-theme
-capitaine-cursors
-brightnessctl
-adwaita-cursors
-virtualbox-host-modules-arch
-virtualbox
-pass
-xclip
-feh
-socat
-etcher-bin
-thunderbird
-downgrade
-inxi
-peek
-mintstick
+    dconf-editor
+    arc-gtk-theme
+    arc-icon-theme
+    adapta-gtk-theme
+    breeze-gtk
+    breeze-icons
+    capitaine-cursors
+    lxappearance
+    adwaita-icon-theme
+    materia-gtk-theme
+    obsidian-icon-theme
+    oxygen-icons
+    oxygen-icons-svg
+    oxygen-sounds
+    numix-circle-icon-theme-git
+    papirus-icon-theme
+    pop-gtk-theme
+    pop-icon-theme
+    capitaine-cursors
+    adwaita-cursors
 )
 
 count=0
@@ -226,15 +268,15 @@ done
 func_category Unpack
 
 list=(
-unace
-unrar
-zip
-unzip
-sharutils
-uudeview
-arj
-cabextract
-file-roller
+    unace
+    unrar
+    zip
+    unzip
+    sharutils
+    uudeview
+    arj
+    cabextract
+    file-roller
 )
 
 count=0
@@ -249,31 +291,31 @@ done
 func_category Additional-distro-specific
 
 list=(
-arandr
-dmenu
-feh
-gmrun
-gtk-engine-murrine
-imagemagick
-lxappearance
-lxrandr
-#nitrogen
-picom
-playerctl
-python-pywal
-volumeicon
-w3m
-urxvt-resize-font-git
-xfce4-appfinder
-xfce4-notifyd
-xfce4-power-manager
-xfce4-screenshooter
-xfce4-settings
-xfce4-screenshooter
-xfce4-taskmanager
-xfce4-terminal
-hardcode-fixer-git
-brightnessctl
+    arandr
+    dmenu
+    feh
+    gmrun
+    gtk-engine-murrine
+    imagemagick
+    lxappearance
+    lxrandr
+    #nitrogen
+    picom
+    playerctl
+    python-pywal
+    volumeicon
+    w3m
+    urxvt-resize-font-git
+    xfce4-appfinder
+    xfce4-notifyd
+    xfce4-power-manager
+    xfce4-screenshooter
+    xfce4-settings
+    xfce4-session
+    xfce4-taskmanager
+    xfce4-terminal
+    hardcode-fixer-git
+    brightnessctl
 )
 
 count=0
@@ -311,24 +353,44 @@ done
 func_category Fonts
 
 list=(
-arcolinux-fonts-git
-awesome-terminal-fonts
-adobe-source-sans-fonts
-cantarell-fonts
-noto-fonts
-ttf-bitstream-vera
-ttf-dejavu
-ttf-droid
-ttf-hack
-ttf-inconsolata
-ttf-liberation
-ttf-roboto
-ttf-ubuntu-font-family
-tamsyn-font
-noto-fonts
-ttf-ms-fonts
-ttf-cascadia-code
-ttf-mac-fonts
+    adobe-source-code-pro-fonts
+    adobe-source-sans-fonts
+    adobe-source-serif-fonts
+    gnu-free-fonts
+    arcolinux-fonts-git
+    awesome-terminal-fonts
+    adobe-source-sans-fonts
+    cantarell-fonts
+    ttf-cascadia-code-nerd
+    ttf-cascadia-code-mono
+    ttf-croscore
+    ttf-dejavu
+    ttf-dejavu-nerd
+    ttf-droid
+    ttf-firacode-nerd
+    ttf-bitstream-vera
+    ttf-hack
+    ttf-inconsolata
+    ttf-inconsolata-nerd
+    ttf-indic-otf
+    ttf-iosevka-nerd
+    ttf-iosevkaterm-nerd
+    ttf-iosevkatermslab-nerd
+    ttf-liberation
+    ttf-roboto
+    ttf-ubuntu-font-family
+    tamsyn-font
+    noto-fonts
+    noto-fonts-extra
+    noto-fonts-emoji
+    ttf-ms-fonts
+    ttf-cascadia-code
+    ttf-mac-fonts
+    ttf-jetbrains-mono-nerd
+    ttf-ubuntu-nerd
+    ttf-ubuntu-mono-nerd
+    ttf-roboto
+    ttf-roboto-mono-nerd
 )
 
 count=0
@@ -343,11 +405,11 @@ done
 func_category Conky
 
 list=(
-conky-lua-archers
-arcolinux-conky-collection-git
-arcolinux-pipemenus-git
-yad
-libpulse
+    conky-lua-archers
+    arcolinux-conky-collection-git
+    arcolinux-pipemenus-git
+    yad
+    libpulse
 )
 
 count=0
