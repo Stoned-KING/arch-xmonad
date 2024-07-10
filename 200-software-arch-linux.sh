@@ -77,7 +77,7 @@ list=(
     xclip
     feh
     socat
-    etcher-bin
+    #etcher-bin
     thunderbird
     inxi
     peek
