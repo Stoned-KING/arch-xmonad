@@ -277,10 +277,15 @@ installed via Guix.")
 (add-hook 'haskell-mode-hook #'lsp)
 (add-hook 'haskell-literate-mode-hook #'lsp)
 
+;; testing csharp setup
+(eval-after-load
+    'company
+  '(add-to-list 'company-backends #'company-omnisharp))
+
 (use-package csharp-mode :ensure t
 :init
 (add-hook 'csharp-mode-hook #'company-mode)
-(add-hook 'csharp-mode-hook #'rainbow-delimiters-mode))
+(add-hook 'csharp-mode-hook #'rainbow-delimiters-mode)) ;; need to install rainbow-delimiters package
 
 (use-package company :ensure t :mode "company-mode")
   (use-package company-box :ensure t

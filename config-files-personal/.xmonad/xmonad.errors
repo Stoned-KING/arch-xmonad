@@ -1,8 +1,1 @@
 $ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/wuodan/.xmonad/build-x86_64-linux -o /home/wuodan/.xmonad/xmonad-x86_64-linux
-
-xmonad.hs:24:1: warning: [-Wdeprecations]
-    Module ‘XMonad.Layout.Cross’ is deprecated:
-      Use XMonad.Layout.Circle or XMonad.Layout.ThreeColumn.ThreeColMid instead
-   |
-24 | import XMonad.Layout.Cross(simpleCross)
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
