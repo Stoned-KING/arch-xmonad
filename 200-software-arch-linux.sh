@@ -71,8 +71,8 @@ func_category Utilities
 list=(
     alacritty
     downgrade
-    virtualbox-host-modules-arch
-    virtualbox
+    #virtualbox-host-modules-arch
+    #virtualbox
     pass
     xclip
     feh
@@ -96,7 +96,6 @@ list=(
     fastfetch
     hw-probe
     font-manager
-    thunderbird
     polybar
     cbatticon
     volumeicon
@@ -125,8 +124,8 @@ list=(
     ffmpeg
     vlc
     ristretto
-    audacity
-    ardour
+    #audacity
+    #ardour
     feh
 )
 
@@ -146,11 +145,10 @@ list=(
     #code
     git
     openssh
-    dotnet-runtime
-    dotnet-sdk
+    #dotnet-runtime
+    #dotnet-sdk
     emacs
     clang
-    pyright
     bash-language-server
     pyright
     haskell-language-server
@@ -170,16 +168,16 @@ done
 func_category Graphics
 
 list=(
-    gimp
-    inkscape
+    #gimp
+    #inkscape
     #nomacs
-    blender
-    krita
+    #blender
+    #krita
     godot
-    fontforge
-    goxel
-    birdfont
-    darktable
+    #fontforge
+    #goxel
+    #birdfont
+    #darktable
 )
 
 count=0
@@ -214,9 +212,9 @@ done
 func_category Document
 
 list=(
-    libreoffice-fresh
-    libreoffice-still
-    scribus
+    #libreoffice-fresh
+    #libreoffice-still
+    #scribus
     obsidian
     dictd
     evince
