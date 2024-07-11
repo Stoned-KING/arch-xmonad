@@ -50,7 +50,7 @@ git config --global init.defaultBranch main
 
 # set git ui color to auto and the editor to visual studio code
 git config --global color.ui auto
-git config --global core.editor "emacs --wait"
+git config --global core.editor "emacs -nw"
 
 # Print configured username and email for git
 git config --get user.name

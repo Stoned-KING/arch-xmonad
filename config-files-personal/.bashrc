@@ -30,8 +30,11 @@ bind "set completion-ignore-case on"
 
 ### ALIASES ###
 
+#polybar
+polybar mainbar-berry &
+
 #wallpaper
-alias wp='bash ~/arcolinux-hephaestus/005-random-wallpaper-feh.sh ~/aphrodite/ 5m'
+bash ~/arcolinux-hephaestus/005-random-wallpaper-feh.sh ~/aphrodite/ 5m &
 
 #list
 alias ls='ls --color=auto'
